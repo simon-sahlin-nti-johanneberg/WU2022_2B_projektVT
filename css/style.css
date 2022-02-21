@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--gray6);
+}
+
+:root {
+    --red: #ff3860;
+    --red-dark: #ff1443;
+    --red-light: #ff5c7c;
+    --blue: #498afb;
+    --blue-dark: #2674fa;
+    --blue-light: #6ca0fc;
+    --orange: #fa8142;
+    --orange-dark: #f96a1f;
+    --orange-light: #fb9865;
+    --green: #09c372;
+    --green-dark: #07a15e;
+    --green-light: #0be586;
+    --purple: #9166cc;
+    --purple-dark: #7d4bc3;
+    --purple-light: #a481d5;
+    --pink: #ff4088;
+    --pink-dark: #ff1c72;
+    --pink-light: #ff649e;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+
+    --font-body: "sofia-pro",sans-serif;
+    --font-head: 'Poppins', sans-serif;
+    --font-code: "attribute-mono",monospace;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Nav-Styling                                */
+/* -------------------------------------------------------------------------- */
+
+.topnav{
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    background-color: var(--gray5);
+
+    display: flex;
+}
+
+.topnav-logo{
+    background-color: var(--red);
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.topnav-links{
+    background-color: var(--blue);
+    flex-grow: 1;
+    margin-right: 15vw;
+}
+.topnav-text{
+    text-decoration: none;
+    margin: 1em;
+
+    color: var(--gray0);
+    font-size: 1.5rem;
+    font-family: var(--font-head);
+    font-weight: 200;
+}
+
+
+
+/*
+
+mindre (filstorlek) bilder
+ta med fler test bilder
+skriva om validering
+skriv mycket om tillgänglighet (contrast checker)
+tänk mer på semantiska taggar. Passar något annan än div?
+kan inte finnas h2 utan h1!!
+skriva mer i början av min dokumentation - lägg mer tid på loggboken
+
+
+
+*/

@@ -1,6 +1,24 @@
-<!--todo-->
+<!--todo
+
+* "alt" på bilder
+* Spacers mellan sections
+* Se över div/section/article
+
+
+FEEDBACK FRÅN FÖRRA:
+mindre (filstorlek) bilder
+ta med fler test bilder
+skriva om validering
+skriv mycket om tillgänglighet (contrast checker)
+tänk mer på semantiska taggar. Passar något annan än div?
+kan inte finnas h2 utan h1!!
+skriva mer i början av min dokumentation - lägg mer tid på loggboken
+
+
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +26,12 @@
     <link rel="stylesheet" href="css/style.css">
     <title>SominStudios</title>
 </head>
+
 <body>
     <nav class="topnav">
-        <div class="topnav-logo"><h1>LOGGA</h1></div>
+        <div class="topnav-logo">
+            <h1>SOMINSTUDIOS</h1>
+        </div>
         <div class="topnav-links flex-center">
             <a href="" class="topnav-text">Games</a>
             <a href="" class="topnav-text">Licensing</a>
@@ -20,39 +41,123 @@
     </nav>
 
 
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
-    <h1>wenimeshuinasumah</h1>
+
+    <section id="titlepage" class="flex-center">
+        <h1>Slogan here</h1>
+    </section>
+
+    <div class="games-wrapper">
+        <section class="games-text">
+            <h1>Puzzle Games</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+        </section>
+        <article class="games-left gamecard">
+            <img src="img/gaming.jpg" alt="">
+            <h3>Game name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <div class="flex-center button">
+                <p>PLAY</p>
+            </div>
+        </article>
+        <article class="games-right gamecard">
+            <img src="img/gaming.jpg" alt="">
+            <h3>Game name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <div class="flex-center button">
+                <p>PLAY</p>
+            </div>
+        </article>
+    </div>
+    <div class="games-wrapper">
+        <section class="games-text">
+            <h1>Platformer Games</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+        </section>
+        <article class="games-left gamecard">
+            <img src="img/gaming.jpg" alt="">
+            <h3>Game name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <div class="flex-center button">
+                <p>PLAY</p>
+            </div>
+        </article>
+        <article class="games-right gamecard">
+            <img src="img/gaming.jpg" alt="">
+            <h3>Game name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <div class="flex-center button">
+                <p>PLAY</p>
+            </div>
+        </article>
+    </div>
+    <div class="games-wrapper">
+        <section class="games-text">
+            <h1>Shooter Games</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+        </section>
+        <article class="games-left gamecard">
+            <img src="img/gaming.jpg" alt="">
+            <h3>Game name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <div class="flex-center button">
+                <p>PLAY</p>
+            </div>
+        </article>
+        <article class="games-right gamecard">
+            <img src="img/gaming.jpg" alt="">
+            <h3>Game name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <div class="flex-center button">
+                <p>PLAY</p>
+            </div>
+        </article>
+    </div>
+
+    <div class="flex-center button games-allbutton">
+        <p>VIEW ALL GAMES</p>
+    </div>
+
+    <div class="licensing-wrapper">
+        <article class="flex-center"><img src="img/gaming.jpg" alt=""></article>
+        <section>
+            <h1>Licensing</h1>
+            <h2>Want a game for your website? We got you covered. Click below to see a complete list of all games that can be licensed</h2>
+            <div class="flex-center button button-orange">
+                <p>VIEW LICENSES</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="partners-wrapper">
+        <h1>Partners</h1>
+        <img src="img/tempsqlogo.png" alt="" class="partners-logo" id="partners-logo1">
+        <img src="img/temprelogo.png" alt="" class="partners-logo" id="partners-logo2">
+        <img src="img/tempsqlogo.png" alt="" class="partners-logo" id="partners-logo3">
+        <img src="img/temprelogo.png" alt="" class="partners-logo" id="partners-logo4">
+        <img src="img/temprelogo.png" alt="" class="partners-logo" id="partners-logo5">
+    </div>
+
+
+
+    <footer class="flex-vertcenter">
+        <p>Copyright © 2022 SominStudios</p>
+        <p>Created by Simon Sahlin</p>
+        <hr id="footer-hr1">
+        <div id="footer-nav">
+            <a href="">Games</a>
+            <a href="">Licensing</a>
+            <a href="">Contact</a>
+            <a href="">About</a>
+        </div>
+        <hr id="footer-hr2">
+        <p>TWITTER TIKTOK INSTAGRAM</p>
+        <hr id="footer-hr3">
+        <p>SOMINSTUDIOS</p>
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

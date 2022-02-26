@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body{
-    background-color: var(--gray6);
-}
+    transition: all .3s;
+}   
 
 :root {
     --red: #ff3860;
@@ -35,17 +32,73 @@ body{
     --gray3: #6c7983;
     --gray4: #454e56;
     --gray5: #2a2e35;
+    --gray5t: #2a2e3500;
     --gray6: #12181b;
+    --gray7: #0b0d0e;
 
     --font-body: "sofia-pro",sans-serif;
     --font-head: 'Poppins', sans-serif;
     --font-code: "attribute-mono",monospace;
 }
 
+body{
+    background-color: var(--gray6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.flex-vertcenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,h2,h3,p{
+    color: var(--gray0);
+    font-family: var(--font-head);
+    text-shadow: 1px black;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 200;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 300;
+}
+p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.button{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: var(--green);
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.button > p{
+    font-weight: 900;
+}
+
+.button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+}
+
+.button-orange{
+    background-color: var(--orange);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -56,45 +109,258 @@ body{
     position: fixed;
     width: 100%;
     height: 64px;
-    background-color: var(--gray5);
+    background-color: var(--gray5t);
 
     display: flex;
+    z-index: 999;
+
+    transition: all 0.3s;
 }
 
 .topnav-logo{
-    background-color: var(--red);
     width: 15vw;
     display: flex;
     align-items: center;
     padding-left: 20px;
 }
 .topnav-links{
-    background-color: var(--blue);
     flex-grow: 1;
     margin-right: 15vw;
 }
+
 .topnav-text{
     text-decoration: none;
-    margin: 1em;
+    margin: 2em;
 
     color: var(--gray0);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: var(--font-head);
     font-weight: 200;
 }
 
+.topnav-opaque{
+    background-color: var(--gray5);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+}
+
+.topnav-hidden{
+    transform: translateY(-64px);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
+
+footer{
+    background-color: var(--gray7);
+    width: 100%;
+    height: 40vh;
+    gap: 10px;
+}
+
+footer > hr{
+    border: none;
+    border-top: 3px dashed var(--gray5);
+    
+}
+
+#footer-hr1{
+    width: 20em;
+}
+#footer-hr2{
+    width: 15em;
+}
+#footer-hr3{
+    width: 10em;
+}
+
+#footer-nav > a{
+    text-decoration: none;
+    margin: .5em;
+
+    color: var(--gray0);
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: var(--font-head);
+    font-weight: 200;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 Title-page                                 */
+/* -------------------------------------------------------------------------- */
+
+#titlepage{
+    width: 100%;
+    height: 120vh;
+    padding-bottom: 20vh;
+    background-image: url("../img/gaming.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Games                                   */
+/* -------------------------------------------------------------------------- */
+
+.games-wrapper{
+    display: grid;
+    grid-template-areas: 
+    "tx tx"
+    "g1 g2"
+    ;
+    width: 1280px;
+    margin: 25px;
+}
+
+.games-text{
+    grid-area: tx;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.games-text > h1{
+    font-weight: 500;
+}
+
+.games-text > h2{
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.games-left{
+    grid-area: g1;
+}
+
+.games-right{
+    grid-area: g2;
+}
+
+.gamecard{
+    width: 600px;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+    background-color: var(--gray5);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all .3s;
+}
+
+.gamecard > img{
+    width: 100%;
+    aspect-ratio: 63/50; /*Ja konstigt format, endast där för att jag lätt ska kunna importera bilder från itch.io, och där använder dom 630x500 av någon anledning*/
+    border-radius: 5px; 
+}
+
+.gamecard > h3{
+    font-size: 2.5em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.gamecard > p{
+    font-weight: 500;
+    text-align: center;
+}
+
+.gamecard:hover{
+    transform: translateY(-5px);
+}
+
+.games-allbutton{
+    width: 50vw;
+    height: 60px;
+}
+
+.games-allbutton > p{
+    font-size: 1.4rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Licensing                                 */
+/* -------------------------------------------------------------------------- */
+
+.licensing-wrapper{
+    display: grid;
+    grid-template-areas: 
+    "ar se"
+    ;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    height: auto;
+    margin: 75px;
+
+    margin-top: 200px; /* ------------------------ TEMPORÄRT ------------------------ */
+}
+
+.licensing-wrapper > article{
+    overflow: hidden;
+    grid-area: ar;
+}
+.licensing-wrapper > section{
+    grid-area: se;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.licensing-wrapper > section > h1{
+    font-size: 4rem;
+}
+
+.licensing-wrapper > article > img{
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Partners                                  */
+/* -------------------------------------------------------------------------- */
 
 
-/*
+.partners-wrapper{
+    margin-top: 100px;
+    display: grid;
+    grid-template-areas: 
+    "h1 h1 h1 h1"
+    "l1 l2 l2 l3"
+    "l4 l4 l5 l5"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 60vw;
+}
 
-mindre (filstorlek) bilder
-ta med fler test bilder
-skriva om validering
-skriv mycket om tillgänglighet (contrast checker)
-tänk mer på semantiska taggar. Passar något annan än div?
-kan inte finnas h2 utan h1!!
-skriva mer i början av min dokumentation - lägg mer tid på loggboken
+.partners-logo{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
-
-*/
+.partners-wrapper > h1{
+    text-align: center;
+    font-size: 5rem;
+    grid-area: h1;
+}
+#partners-logo1{
+    grid-area: l1;
+}
+#partners-logo2{
+    grid-area: l2;
+}
+#partners-logo3{
+    grid-area: l3;
+}
+#partners-logo4{
+    grid-area: l4;
+}
+#partners-logo5{
+    grid-area: l5;
+}

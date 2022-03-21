@@ -71,6 +71,10 @@ h1{
     font-weight: 200;
 }
 h2{
+    font-size: 3rem;
+    font-weight: 200;
+}
+h3{
     font-size: 2rem;
     font-weight: 300;
 }
@@ -123,14 +127,22 @@ p{
     align-items: center;
     padding-left: 20px;
 }
+
+.topnav-logo h1 a{
+    text-decoration: none;
+    color: var(--gray0);
+}
+
 .topnav-links{
     flex-grow: 1;
     margin-right: 15vw;
+    pointer-events: none;
 }
 
 .topnav-text{
+    pointer-events: auto;
     text-decoration: none;
-    margin: 2em;
+    margin: 4%;
 
     color: var(--gray0);
     font-size: 1.2rem;
@@ -146,6 +158,47 @@ p{
 .topnav-hidden{
     transform: translateY(-64px);
 }
+.topnav-hr{
+    display: none;
+    border: none;
+    border-top: 1px solid var(--gray1);
+}
+
+/* ------------------------------- Burger-Menu ------------------------------ */
+
+.burger {
+    position: absolute;
+    top: -70px;
+    right: 5px;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.burger > div {
+    width: 100%;
+    height: 11%;
+    background-color: var(--gray0);
+    border-radius: 9999px;
+    transition: all 0.3s;
+}
+.burger-active #line2 {
+    opacity: 0;
+}
+.burger-active #line1 {
+    transform: rotate(135deg) translate(10px, -10px);
+}
+.burger-active #line3 {
+    transform: rotate(45deg) translate(-10px, -10px);
+}
+.topnav-active {
+    transform: translateX(-70vw);
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                   Footer                                   */
@@ -198,6 +251,10 @@ footer > hr{
     background-size: cover;
 }
 
+.titletext{
+    text-align: center;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    Games                                   */
 /* -------------------------------------------------------------------------- */
@@ -210,7 +267,9 @@ footer > hr{
     ;
     width: 1280px;
     margin: 25px;
+    place-items: center; 
 }
+
 
 .games-text{
     grid-area: tx;
@@ -218,11 +277,11 @@ footer > hr{
     height: auto;
     text-align: center;
 }
-.games-text > h1{
+.games-text > h2{
     font-weight: 500;
 }
 
-.games-text > h2{
+.games-text > p{
     font-weight: 200;
     font-size: 1.5rem;
 }
@@ -252,7 +311,7 @@ footer > hr{
 
 .gamecard > img{
     width: 100%;
-    aspect-ratio: 63/50; /*Ja konstigt format, endast där för att jag lätt ska kunna importera bilder från itch.io, och där använder dom 630x500 av någon anledning*/
+    aspect-ratio: 63/50; /*Ja konstigt format, endast där för att jag lätt ska kunna importera bilder från itch.io, och där använder dom 630px*500px av någon anledning*/
     border-radius: 5px; 
 }
 
@@ -280,6 +339,8 @@ footer > hr{
     font-size: 1.4rem;
 }
 
+
+
 /* -------------------------------------------------------------------------- */
 /*                                  Licensing                                 */
 /* -------------------------------------------------------------------------- */
@@ -298,7 +359,6 @@ footer > hr{
 }
 
 .licensing-wrapper > article{
-    overflow: hidden;
     grid-area: ar;
 }
 .licensing-wrapper > section{
@@ -308,8 +368,12 @@ footer > hr{
     flex-direction: column;
     justify-content: space-between;
 }
-.licensing-wrapper > section > h1{
+.licensing-wrapper > section > h2{
     font-size: 4rem;
+}
+.licensing-wrapper > section > p{
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 .licensing-wrapper > article > img{
@@ -317,6 +381,8 @@ footer > hr{
     aspect-ratio: 1/1;
     border-radius: 100%;
 }
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                  Partners                                  */
@@ -333,18 +399,19 @@ footer > hr{
     ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 60vw;
+    overflow: hidden;
 }
 
 .partners-logo{
     width: 100%;
     height: auto;
-    padding: 30px;
+    padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.partners-wrapper > h1{
+.partners-wrapper > h2{
     text-align: center;
     font-size: 5rem;
     grid-area: h1;
@@ -363,4 +430,180 @@ footer > hr{
 }
 #partners-logo5{
     grid-area: l5;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               ALL GAMES PAGE                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+
+#gamespage-title{
+    margin-top: 64px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+#gamespage-title h2{
+    font-size: 5em;
+}
+#gamespage-title p{
+    text-align: center;
+    width: 70%;
+    font-size: 1.5em;
+}
+
+.gamespage-gameswrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    border: 4px solid var(--blue);
+}
+.gamespage-gameitem{
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 500px;
+    min-width: 300px;
+    aspect-ratio: 1/1;
+    background-color: var(--red);
+    border: 4px solid var(--green);
+}
+
+.gameitem{
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 350px;
+    min-width: 100px;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+    background-color: var(--gray5);
+
+    display: flex;
+    flex-direction: column;
+    transition: all .3s;
+}
+
+.gameitem > img{
+    width: 100%;
+    aspect-ratio: 63/50; /*Ja, konstigt format, endast där för att jag lätt ska kunna importera bilder från itch.io, och där använder dom 630px*500px av någon anledning*/
+    border-radius: 5px; 
+    margin-bottom: 5px;
+}
+
+.gameitem > h3{
+    font-size: 1.1em;
+    color: var(--red);
+    font-weight: 500;
+    text-align: center;
+}
+
+.gameitem > p{
+    font-size: 0.875em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.gameitem:hover{
+    transform: translateY(-5px);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MOBILE-LAYOUT                               */
+/* -------------------------------------------------------------------------- */
+
+
+
+@media screen and (max-width: 1280px){
+    .topnav-links{
+        margin-right: 64px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .topnav-text{
+        margin: 2%;
+    }
+    .games-wrapper{
+        display: grid;
+        grid-template-areas: 
+        "tx"
+        "g1"
+        "g2"
+        ;
+        width: 640px;
+    }
+}
+@media screen and (max-width: 850px){
+    .topnav-links{
+        z-index: 998;
+        position: absolute;
+        top: 64px;
+        right: -70vw;
+        margin-right: 0px;
+        background-color: var(--gray5);
+        width: 70vw;
+        height: 100vh;
+
+        padding-top: 20px;
+        padding-left: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.9);
+    }
+    .topnav-text{
+        font-size: 1.5rem;
+        margin: 5%;
+    }
+    .topnav-hr{
+        display: inherit;
+        width: 100%;
+    }
+    .burger{
+        top: 0px;
+        position: absolute;
+    }
+}
+@media screen and (max-width: 640px){
+    .partners-wrapper{
+        width: 90vw;
+        margin-top: 25px;
+    }
+    .games-wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+    .gamecard{
+        width: 90%;
+    }
+    .games-allbutton{
+        width: 20em;
+    }
+    .licensing-wrapper{
+        display: grid;
+        grid-template-areas: 
+        "ar"
+        "se"
+        ;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+        margin: 75px;
+    
+        margin-top: 100px; /* ------------------------ TEMPORÄRT ------------------------ */
+    }
+    .topnav-logo h1 {
+        font-size: 2.5em;
+    }
 }

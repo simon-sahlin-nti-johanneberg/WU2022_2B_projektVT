@@ -1,19 +1,33 @@
+/* -------------------------------------------------------------------------- */
+/*                           HIDING AND SHOWING NAV                           */
+/* -------------------------------------------------------------------------- */
 scrollpos = window.scrollY;
 
-const header_height = document.querySelector("#titlepage").offsetHeight - 200
 const topnav = document.querySelector(".topnav")
+var titleImg = document.querySelector("#titlepage");
+title_height = 0
+if(titleImg){
+    title_height = titleImg.offsetHeight - 200
+}else{
+    topnav.classList.add('topnav-opaque')
+}
+
 
 scrollstart = window.scrollY;
 scrolldirection = 1;
-hideheight = header_height + 500
+hideheight = title_height + 500
 hidedistance = 300;
 
 window.addEventListener('scroll', function() { 
+
+    if (toggle){ //Guard clause
+        return
+    }
+
     if (!((this.window.scrollY - scrollpos) * scrolldirection >= 0)){
         scrolldirection = scrolldirection * -1
         scrollstart = window.scrollY
     }
-
 
     scrollpos = window.scrollY;
 
@@ -24,7 +38,7 @@ window.addEventListener('scroll', function() {
         topnav.classList.remove('topnav-hidden')
 
 
-    if (scrollpos >= header_height) {  
+    if (scrollpos >= title_height) {  
         topnav.classList.add('topnav-opaque')
     }
     else { 
@@ -33,3 +47,28 @@ window.addEventListener('scroll', function() {
     }
 
 })
+
+
+/* -------------------------------------------------------------------------- */
+/*                            BURGER MENU ON MOBILE                           */
+/* -------------------------------------------------------------------------- */
+
+const burger = document.querySelector('.burger')
+const nav = document.querySelector('.topnav-links')
+
+toggle = false
+
+function toggleMenu() {
+    toggle = !toggle
+    nav.classList.toggle('topnav-active')
+    burger.classList.toggle('burger-active')
+
+    if (toggle){
+        topnav.classList.add('topnav-opaque')
+    }
+    else if(scrollpos < title_height){
+        topnav.classList.remove('topnav-opaque')
+    }
+}
+
+burger.addEventListener('click', toggleMenu)

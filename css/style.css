@@ -41,6 +41,10 @@
     --font-code: "attribute-mono",monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--gray6);
     display: flex;
@@ -82,11 +86,16 @@ p{
     font-size: 1rem;
     font-weight: 300;
 }
+em{
+    color: var(--orange-dark);
+    font-weight: 500;
+    font-style: normal;
+}
 
 .button{
     width: 100%;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: var(--green);
     border-radius: 5px;
     transition: all .3s;
@@ -99,10 +108,22 @@ p{
 .button:hover{
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+    cursor: pointer;
 }
 
 .button-orange{
     background-color: var(--orange);
+}
+.button-thin{
+    height: 35px;
+}
+
+.svg-white{
+    /*Koden nedan är till för att ändra färgen på SVGer, genererad med detta verktyget: https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(91%) sepia(11%) saturate(138%) hue-rotate(172deg) brightness(102%) contrast(86%);
+}
+.svg-gray{
+    filter: invert(93%) sepia(3%) saturate(4330%) hue-rotate(181deg) brightness(89%) contrast(78%);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -237,13 +258,23 @@ footer > hr{
     font-family: var(--font-head);
     font-weight: 200;
 }
+
+#footer-icons{
+    width: 10em;
+    justify-content: space-between;
+}
+
+#footer-icons img{
+    height: 25px;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                 Title-page                                 */
 /* -------------------------------------------------------------------------- */
 
 #titlepage{
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     padding-bottom: 20vh;
     background-image: url("../img/gaming.jpg");
     background-position: center;
@@ -462,29 +493,21 @@ footer > hr{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 95%;
     height: auto;
-    border: 4px solid var(--blue);
-}
-.gamespage-gameitem{
-    flex-grow: 1;
-    flex-shrink: 1;
-    max-width: 500px;
-    min-width: 300px;
-    aspect-ratio: 1/1;
-    background-color: var(--red);
-    border: 4px solid var(--green);
+    margin-bottom: 100px;
 }
 
 .gameitem{
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: 350px;
+    width: 300px;
+    max-width: 600px;
     min-width: 100px;
     height: auto;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.38);
     background-color: var(--gray5);
 
@@ -496,7 +519,7 @@ footer > hr{
 .gameitem > img{
     width: 100%;
     aspect-ratio: 63/50; /*Ja, konstigt format, endast där för att jag lätt ska kunna importera bilder från itch.io, och där använder dom 630px*500px av någon anledning*/
-    border-radius: 5px; 
+    border-radius: 2.5px; 
     margin-bottom: 5px;
 }
 
@@ -517,10 +540,340 @@ footer > hr{
     transform: translateY(-5px);
 }
 
+
 /* -------------------------------------------------------------------------- */
-/*                                MOBILE-LAYOUT                               */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                LICENSES PAGE                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
 /* -------------------------------------------------------------------------- */
 
+#licensepage-title{
+    margin-top: 88px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+#licensepage-title h2{
+    font-size: 3em;
+    font-weight: 300;
+}
+#licensepage-title p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    text-align: center;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.licensepage-header{
+    background-color: var(--gray7);
+    text-align: center;
+    border-radius: 15px;
+    width: 90%;
+    padding: 5px;
+}
+.licensepage-header h2{
+    font-size: 2.5em;
+}
+
+#licensepage-customswrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    margin-bottom: 75px;
+}
+.licensepage-customscard{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 300px;
+    max-width: 600px;
+    min-width: 100px;
+    height: auto;
+
+    padding: 5px;
+    text-align: center;
+}
+.licensepage-customscard img{
+    width: 30%;
+    margin: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Contact page                                */
+/* -------------------------------------------------------------------------- */
+
+.contactgrid-wrapper{
+    width: 75%;
+    margin-bottom: 110px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "te"
+    "fo"
+    "cc"
+    ;
+}
+#contactgrid-text{
+    grid-area: te;
+    text-align: center;
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+#contactgrid-form{
+    padding-top: 10%;
+    grid-area: fo;
+}
+
+#contactgrid-contacts{
+    padding: 10%;
+    grid-area: cc;
+    color: var(--gray3);
+    border-top: 3px dashed var(--gray3);
+}
+
+.contactgrid-icons{
+    width: 15%;
+}
+
+#contactgrid-contacttext{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+#contactgrid-contacttext div{
+    gap: 20%;
+}
+
+#contactgrid-contacttext div p{
+    font-size: 1.5em;
+    color: var(--gray2);
+    text-align: center;
+}
+
+#contactgrid-contacttext div p:hover{
+    color: var(--gray0);
+    cursor: pointer;
+}
+
+#contactgrid-contacts hr{
+    border: none;
+    border-top: 3px dashed var(--gray3);
+}
+
+#contactgrid-socialicons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -10%;
+    margin-right: -10%;
+    height: 100px;
+    display: flex;
+    gap: 10px;
+}
+
+.contactgrid-circle{
+    width: 20%;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    background-color: var(--gray7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactgrid-circle img{
+    width: 50%;
+}
+
+.contactgrid-circle:hover{
+    background-color: var(--gray1);
+    cursor: pointer;
+}
+
+.contactgrid-circle:hover img {
+    filter: none;
+}
+
+
+input, textarea{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    color: var(--gray6);
+    background-color: var(--gray1);
+    resize:vertical;
+    font-family: var(--font-head);
+}
+input[type=button]{
+    width: 90%;
+    color: var(--gray0);
+    font-family: var(--font-head);
+    text-shadow: 1px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 ABOUT PAGE                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+#aboutpage-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "i1"
+    "t1"
+    "i2"
+    "t2"
+    "i3"
+    "t3"
+    "i4"
+    "t4"
+    ;
+
+    width: 80%;
+    overflow: hidden;
+}
+
+.aboutpage-card{
+    padding: 7%;
+}
+
+.aboutpage-card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutpage-card h3{
+    font-size: 2.2em;
+    font-weight: 300;
+}
+.aboutpage-card h3 em, .aboutpage-card p em{
+    font-weight: 600;
+}
+
+.aboutpage-card p{
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+
+#aboutpage-image1{
+    grid-area: i1;
+}
+#aboutpage-image2{
+    grid-area: i2;
+}
+#aboutpage-image3{
+    grid-area: i3;
+}
+#aboutpage-image4{
+    grid-area: i4;
+}
+#aboutpage-text1{
+    grid-area: t1;
+}
+#aboutpage-text2{
+    grid-area: t2;
+}
+#aboutpage-text3{
+    grid-area: t3;
+}
+#aboutpage-text4{
+    grid-area: t4;
+}
+
+
+#aboutpage-text1 p em, #aboutpage-text1 h3 em{
+    color: var(--red);
+}
+#aboutpage-text2 p em, #aboutpage-text2 h3 em{
+    color: var(--green);
+}
+#aboutpage-text3 p em, #aboutpage-text3 h3 em{
+    color: var(--blue);
+}
+#aboutpage-text4 p em, #aboutpage-text4 h3 em{
+    color: var(--pink);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 800px) {
+    .gamespage-gameswrapper{
+        width: 70%;
+    }
+    #licensepage-title p{
+        width: 70%;
+    }
+    .licensepage-header{
+        width: 80%;
+    }
+    .licensepage-header h2{
+        font-size: 3em;
+    }
+    .contactgrid-wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "te te"
+        "fo cc"
+        ;
+    }
+    #contactgrid-contacts{
+        border: none;
+    }
+    .contactgrid-circle{
+        width: 17%;
+    }
+    #contactgrid-socialicons{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    #aboutpage-wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "i1 t1"
+        "t2 i2"
+        "i3 t3"
+        "t4 i4"
+        ;
+    }
+}
 
 
 @media screen and (max-width: 1280px){

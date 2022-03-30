@@ -1,9 +1,11 @@
 <!--todo
 
-* "alt" på bilder
+"alt" på bilder
 * Spacers mellan sections
 * Se över div/section/article
-
+* Mobil layout -> öppen burgare -> desktop layout -> nav items försvinner
+* "what" section längst upp
+* Fixa titlar
 
 FEEDBACK FRÅN FÖRRA:
 mindre (filstorlek) bilder
@@ -13,6 +15,7 @@ skriv mycket om tillgänglighet (contrast checker)
 tänk mer på semantiska taggar. Passar något annan än div?
 kan inte finnas h2 utan h1!!
 skriva mer i början av min dokumentation - lägg mer tid på loggboken
+
 
 
 -->
@@ -36,11 +39,11 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <hr class="topnav-hr">
             <a href="/games.html" class="topnav-text">Games</a>
             <hr class="topnav-hr">
-            <a href="" class="topnav-text">Licensing</a>
+            <a href="/licensing.html" class="topnav-text">Licensing</a>
             <hr class="topnav-hr">
-            <a href="" class="topnav-text">Contact</a>
+            <a href="/licensing.html#contact-header" class="topnav-text">Contact</a>
             <hr class="topnav-hr">
-            <a href="" class="topnav-text">About</a>
+            <a href="/about.html" class="topnav-text">About</a>
             <hr class="topnav-hr">
         </div>
 
@@ -64,15 +67,15 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </section>
         <article class="games-left gamecard">
-            <img src="img/gaming.jpg" alt="">
-            <h3>Game name</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
+            <img src="games\StickySlimes\thumb.png" alt="game thumbnail">
+            <h3>Sticky Slimes</h3>
+            <p>Stick Together To Reach New Places!</p>
             <div class="flex-center button">
                 <p>PLAY</p>
             </div>
         </article>
         <article class="games-right gamecard">
-            <img src="img/gaming.jpg" alt="">
+            <img src="img/gaming.jpg" alt="game thumbnail">
             <h3>Game name</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
             <div class="flex-center button">
@@ -83,11 +86,11 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
 
     <div class="games-wrapper">
         <section class="games-text">
-            <h2>Puzzle Games</h2>
+            <h2>Platformer Games</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </section>
         <article class="games-left gamecard">
-            <img src="img/gaming.jpg" alt="">
+            <img src="img/gaming.jpg" alt="game thumbnail">
             <h3>Game name</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
             <div class="flex-center button">
@@ -95,7 +98,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             </div>
         </article>
         <article class="games-right gamecard">
-            <img src="img/gaming.jpg" alt="">
+            <img src="img/gaming.jpg" alt="game thumbnail">
             <h3>Game name</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
             <div class="flex-center button">
@@ -106,11 +109,11 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
 
     <div class="games-wrapper">
         <section class="games-text">
-            <h2>Puzzle Games</h2>
+            <h2>Shooter Games</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </section>
         <article class="games-left gamecard">
-            <img src="img/gaming.jpg" alt="">
+            <img src="img/gaming.jpg" alt="game thumbnail">
             <h3>Game name</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
             <div class="flex-center button">
@@ -118,7 +121,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             </div>
         </article>
         <article class="games-right gamecard">
-            <img src="img/gaming.jpg" alt="">
+            <img src="img/gaming.jpg" alt="game thumbnail">
             <h3>Game name</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dolore!</p>
             <div class="flex-center button">
@@ -128,16 +131,16 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
     </div>
 
 
-    <div class="flex-center button games-allbutton">
+    <div class="flex-center button games-allbutton" onclick="location.href='/games.html';">
         <p>VIEW ALL GAMES</p>
     </div>
 
     <div class="licensing-wrapper">
-        <article class="flex-center"><img src="img/gaming.jpg" alt=""></article>
+        <article class="flex-center"><img src="img/gaming.jpg" alt="image of someone playing games"></article>
         <section>
             <h2>Licensing</h2>
             <p>Want a game for your website? We got you covered. Click below to see a complete list of all games that can be licensed</p>
-            <div class="flex-center button button-orange">
+            <div class="flex-center button button-orange" onclick="location.href='/licensing.html';">
                 <p>VIEW LICENSES</p>
             </div>
         </section>
@@ -145,11 +148,11 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
 
     <div class="partners-wrapper">
         <h2>Partners</h2>
-        <img src="img/tempsqlogo.png" alt="" class="partners-logo" id="partners-logo1">
-        <img src="img/temprelogo.png" alt="" class="partners-logo" id="partners-logo2">
-        <img src="img/tempsqlogo.png" alt="" class="partners-logo" id="partners-logo3">
-        <img src="img/temprelogo.png" alt="" class="partners-logo" id="partners-logo4">
-        <img src="img/temprelogo.png" alt="" class="partners-logo" id="partners-logo5">
+        <img src="img/tempsqlogo.png" alt="company logo" class="partners-logo" id="partners-logo1">
+        <img src="img/temprelogo.png" alt="company logo" class="partners-logo" id="partners-logo2">
+        <img src="img/tempsqlogo.png" alt="company logo" class="partners-logo" id="partners-logo3">
+        <img src="img/temprelogo.png" alt="company logo" class="partners-logo" id="partners-logo4">
+        <img src="img/temprelogo.png" alt="company logo" class="partners-logo" id="partners-logo5">
     </div>
 
 
@@ -159,13 +162,17 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
         <p>Created by Simon Sahlin</p>
         <hr id="footer-hr1">
         <div id="footer-nav">
-            <a href="">Games</a>
-            <a href="">Licensing</a>
-            <a href="">Contact</a>
-            <a href="">About</a>
+            <a href="/games.html">Games</a>
+            <a href="/licensing.html">Licensing</a>
+            <a href="/licensing.html#contact-header">Contact</a>
+            <a href="/about.html">About</a>
         </div>
         <hr id="footer-hr2">
-        <p>TWITTER TIKTOK INSTAGRAM</p>
+        <div id="footer-icons" class="flex-center">
+            <img class="svg-white" src="img\svg\twitter.svg" alt="twitter logo">
+            <img class="svg-white" src="img\svg\tiktok.svg" alt="tiktok logo">
+            <img class="svg-white" src="img\svg\instagram.svg" alt="instagram logo">
+        </div>
         <hr id="footer-hr3">
         <p>SOMINSTUDIOS</p>
     </footer>

@@ -309,6 +309,7 @@ footer > hr{
     text-align: center;
 }
 .games-text > h2{
+    color: var(--orange);
     font-weight: 500;
 }
 
@@ -347,6 +348,7 @@ footer > hr{
 }
 
 .gamecard > h3{
+    color: var(--red-light);
     font-size: 2.5em;
     font-weight: 500;
     text-align: center;

@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all .3s;
 }   
 
 :root {
@@ -32,7 +31,7 @@
     --gray3: #6c7983;
     --gray4: #454e56;
     --gray5: #2a2e35;
-    --gray5t: #2a2e3500;
+    --gray5t: #0000005b;
     --gray6: #12181b;
     --gray7: #0b0d0e;
 
@@ -98,7 +97,7 @@ em{
     margin-top: 10px;
     background-color: var(--green);
     border-radius: 5px;
-    transition: all .3s;
+    transition: transform .3s, box-shadow .3s;
 }
 
 .button > p{
@@ -134,6 +133,15 @@ em{
     padding: 5px;
 }
 
+hr{
+    width: 100%;
+    border: none;
+    border-top: 5px dashed var(--gray7);
+}
+.spacer{
+    margin: 100px 0px;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                                 Nav-Styling                                */
@@ -147,14 +155,14 @@ em{
 
     display: flex;
     z-index: 999;
-
-    transition: all 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .topnav-logo{
     width: 15vw;
     display: flex;
     align-items: center;
+    padding-top: 10px;
     padding-left: 20px;
 }
 
@@ -163,10 +171,15 @@ em{
     color: var(--gray0);
 }
 
+.topnav-logo h1 a img{
+    height: 40px;
+}
+
 .topnav-links{
     flex-grow: 1;
     margin-right: 15vw;
     pointer-events: none;
+    transition: transform 0.3s;
 }
 
 .topnav-text{
@@ -191,7 +204,7 @@ em{
 .topnav-hr{
     display: none;
     border: none;
-    border-top: 1px solid var(--gray1);
+    border-top: 5px dashed var(--gray4);
 }
 
 /* ------------------------------- Burger-Menu ------------------------------ */
@@ -213,7 +226,7 @@ em{
     height: 11%;
     background-color: var(--gray0);
     border-radius: 9999px;
-    transition: all 0.3s;
+    transition: transform 0.3s;
 }
 .burger-active #line2 {
     opacity: 0;
@@ -284,15 +297,37 @@ footer > hr{
 #titlepage{
     width: 100%;
     height: 100vh;
-    padding-bottom: 20vh;
-    background-image: url("../img/gaming.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+}
+#titlepage video{
+    height: 120%;
+    z-index: 1;
+}
+
+#graybox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.308);
+    z-index: 2;
+}
+
+.titlebox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .titletext{
     text-align: center;
+    text-shadow: 0px 0px 5px var(--gray7);
+    z-index: 3;
+    font-weight: 400;
+    width: 90%;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -347,7 +382,7 @@ footer > hr{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    transition: all .3s;
+    transition: transform .3s;
 }
 
 .gamecard > img{
@@ -395,9 +430,7 @@ footer > hr{
     grid-template-columns: 1fr 1fr;
     width: 80vw;
     height: auto;
-    margin: 75px;
-
-    margin-top: 200px; /* ------------------------ TEMPORÄRT ------------------------ */
+    margin: 0px 75px;
 }
 
 .licensing-wrapper > article{
@@ -432,7 +465,6 @@ footer > hr{
 
 
 .partners-wrapper{
-    margin-top: 100px;
     display: grid;
     grid-template-areas: 
     "h1 h1 h1 h1"
@@ -525,7 +557,7 @@ footer > hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all .3s;
+    transition: transform .3s;
 }
 
 .gameitem > img{
@@ -667,6 +699,7 @@ footer > hr{
     font-size: 1.5em;
     color: var(--gray2);
     text-align: center;
+    transition: color 0.3s;
 }
 
 #contactgrid-contacttext div p:hover{
@@ -697,10 +730,12 @@ footer > hr{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s;
 }
 
 .contactgrid-circle img{
     width: 50%;
+    transition: filter 0.3s;
 }
 
 .contactgrid-circle:hover{
@@ -766,6 +801,10 @@ input[type=button]{
 
 .aboutpage-card{
     padding: 7%;
+}
+
+.aboutpage-bordertop{
+    border-top: 5px dashed var(--gray7);
 }
 
 .aboutpage-card img{
@@ -876,6 +915,12 @@ input[type=button]{
         "i3 t3"
         "t4 i4"
         ;
+    }
+    .aboutpage-card{
+        border-top: 5px dashed var(--gray7);
+    }
+    .titletext{
+        width: 60%;
     }
 }
 

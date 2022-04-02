@@ -1,12 +1,7 @@
 <!--todo
 
-"alt" på bilder
-* Spacers mellan sections
-* Se över div/section/article
 * Mobil layout -> öppen burgare -> desktop layout -> nav items försvinner
 * "what" section längst upp
-* Fixa titlar
-* Riktig header Icon
 
 FEEDBACK FRÅN FÖRRA:
 mindre (filstorlek) bilder
@@ -29,15 +24,15 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>SominStudios</title>
-    <link rel="icon" href="img/gaming.jpg" type="image/icon type">
+    <link rel="icon" href="img/icon.png" type="image/icon type">
 </head>
 
 <body>
     <nav class="topnav">
         <div class="topnav-logo">
-            <h1><a href="index.html">SOMINSTUDIOS</a></h1>
+            <h1><a href="index.html"><img src="/img/logo.png" alt="SominStudios Logo"></a></h1>
         </div>
-        <div class="topnav-links flex-center">
+        <section class="topnav-links flex-center">
             <hr class="topnav-hr">
             <a href="/games.html" class="topnav-text">Games</a>
             <hr class="topnav-hr">
@@ -47,7 +42,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <hr class="topnav-hr">
             <a href="/about.html" class="topnav-text">About</a>
             <hr class="topnav-hr">
-        </div>
+        </section>
 
         <div class="burger">
             <div id="line1"></div>
@@ -57,22 +52,27 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
 
     </nav>
 
-
-
     <section id="titlepage" class="flex-center">
-        <h2 class="titletext">Slogan here slogan here</h2>
+        <div class="titlebox">
+            <h2 class="titletext">Creative and Unique HTML5 Games For Your Website</h2>
+        </div>
+        <div id="graybox"></div>
+        <video autoplay muted loop id="myVideo">
+            <source src="img/trailer3.mp4" type="video/mp4">
+        </video>
     </section>
 
-    <div class="games-wrapper">
-        <section class="games-text">
+    <hr>
+    <section class="games-wrapper">
+        <div class="games-text">
             <h2>Puzzle Games</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </section>
+        </div>
         <article class="games-left gamecard">
             <img src="img/thumbnails/thumb-StickySlimes.jpg" alt="game thumbnail">
             <h3>Sticky Slimes</h3>
             <p>Stick Together To Reach New Places and Possibilities!</p>
-            <div class="flex-center button">
+            <div class="flex-center button" onclick="location.href='//sominstudios.itch.io/sticky-slimes';">
                 <p>PLAY</p>
             </div>
         </article>
@@ -80,22 +80,22 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <img src="img/thumbnails/thumb-MagicCassette.jpg" alt="game thumbnail">
             <h3>Magic Cassette</h3>
             <p>Bend Time In Your Favour To Reach The Exit!</p>
-            <div class="flex-center button">
+            <div class="flex-center button" onclick="location.href='//sominstudios.itch.io/magic-cassette';">
                 <p>PLAY</p>
             </div>
         </article>
-    </div>
-
-    <div class="games-wrapper">
-        <section class="games-text">
+    </section>
+    <hr>
+    <section class="games-wrapper">
+        <div class="games-text">
             <h2>Platformer Games</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </section>
+        </div>
         <article class="games-left gamecard">
             <img src="img/thumbnails/thumb-ShapeMaze.jpg" alt="game thumbnail">
             <h3>ShapeMaze</h3>
             <p>Try To Manouver Through The Ever Changing Maze!</p>
-            <div class="flex-center button">
+            <div class="flex-center button" onclick="location.href='//sominstudios.itch.io/shapemaze';">
                 <p>PLAY</p>
             </div>
         </article>
@@ -103,22 +103,22 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <img src="img/thumbnails/thumb-GlowPaint.jpg" alt="game thumbnail">
             <h3>Glow Paint</h3>
             <p>Spread Your Paint To Reveal The Hidden Level!</p>
-            <div class="flex-center button">
+            <div class="flex-center button" onclick="location.href='//sominstudios.itch.io/glow-paint';">
                 <p>PLAY</p>
             </div>
         </article>
-    </div>
-
-    <div class="games-wrapper">
-        <section class="games-text">
-            <h2>Space Games</h2>
+    </section>
+    <hr>
+    <section class="games-wrapper">
+        <div class="games-text">
+            <h2>Other Games</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </section>
+        </div>
         <article class="games-left gamecard">
             <img src="img/thumbnails/thumb-SpaceMiner.jpg" alt="game thumbnail">
             <h3>SpaceMiner</h3>
             <p>Find Ores, Upgrade Your Ship, Become Rich.</p>
-            <div class="flex-center button">
+            <div class="flex-center button" onclick="location.href='//sominstudios.itch.io/spaceminer';">
                 <p>PLAY</p>
             </div>
         </article>
@@ -126,19 +126,19 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <img src="img/thumbnails/thumb-SwingShot.jpg" alt="game thumbnail">
             <h3>SwingShot</h3>
             <p>A Top Down Shooter, With A Twist! (Literally)</p>
-            <div class="flex-center button">
+            <div class="flex-center button" onclick="location.href='//sominstudios.itch.io/swingshot';">
                 <p>PLAY</p>
             </div>
         </article>
-    </div>
-
-
+    </section>
     <div class="flex-center button games-allbutton" onclick="location.href='/games.html';">
         <p>VIEW ALL GAMES</p>
     </div>
 
-    <div class="licensing-wrapper">
-        <article class="flex-center"><img src="img/pixels.jpg" alt="image of someone playing games"></article>
+    <hr class="spacer">
+
+    <section class="licensing-wrapper">
+        <article class="flex-center"><img src="img/Screenshot.jpg" alt="stylized screenshot"></article>
         <section>
             <h2>Licensing</h2>
             <p>Want a game for your website? We got you covered. Click below to see a complete list of all games that can be licensed</p>
@@ -146,16 +146,18 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
                 <p>VIEW LICENSES</p>
             </div>
         </section>
-    </div>
+    </section>
 
-    <div class="partners-wrapper">
+    <hr class="spacer">
+
+    <section class="partners-wrapper">
         <h2>Partners</h2>
-        <img src="img/external-logos/itch.png" alt="company logo" class="partners-logo" id="partners-logo1">
-        <img src="img/external-logos/CMG.svg" alt="company logo" class="partners-logo" id="partners-logo2">
-        <img src="img/external-logos/NG.jpg" alt="company logo" class="partners-logo" id="partners-logo3">
-        <img src="img/external-logos/EG.jpg" alt="company logo" class="partners-logo" id="partners-logo4">
-        <img src="img/external-logos/CG.avif" alt="company logo" class="partners-logo" id="partners-logo5">
-    </div>
+        <img src="img/external-logos/itch.png" alt="itch.io logo" class="partners-logo" id="partners-logo1">
+        <img src="img/external-logos/CMG.svg" alt="Coolmathgames logo" class="partners-logo" id="partners-logo2">
+        <img src="img/external-logos/NG.jpg" alt="Newgrounds logo" class="partners-logo" id="partners-logo3">
+        <img src="img/external-logos/EG.png" alt="Engineering.com logo" class="partners-logo" id="partners-logo4">
+        <img src="img/external-logos/CG.avif" alt="Crazygames logo" class="partners-logo" id="partners-logo5">
+    </section>
 
 
 

@@ -126,6 +126,15 @@ em{
     filter: invert(93%) sepia(3%) saturate(4330%) hue-rotate(181deg) brightness(89%) contrast(78%);
 }
 
+.boxborder-header{
+    background-color: var(--gray7);
+    text-align: center;
+    border-radius: 15px;
+    width: 90%;
+    padding: 5px;
+}
+
+
 /* -------------------------------------------------------------------------- */
 /*                                 Nav-Styling                                */
 /* -------------------------------------------------------------------------- */
@@ -430,8 +439,8 @@ footer > hr{
     "l1 l2 l2 l3"
     "l4 l4 l5 l5"
     ;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 60vw;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    width: 70vw;
     overflow: hidden;
 }
 
@@ -486,7 +495,7 @@ footer > hr{
 }
 #gamespage-title p{
     text-align: center;
-    width: 70%;
+    width: 65%;
     font-size: 1.5em;
 }
 
@@ -515,6 +524,7 @@ footer > hr{
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     transition: all .3s;
 }
 
@@ -573,17 +583,6 @@ footer > hr{
     font-weight: 300;
 }
 
-.licensepage-header{
-    background-color: var(--gray7);
-    text-align: center;
-    border-radius: 15px;
-    width: 90%;
-    padding: 5px;
-}
-.licensepage-header h2{
-    font-size: 2.5em;
-}
-
 #licensepage-customswrapper{
     display: flex;
     flex-direction: row;
@@ -603,6 +602,9 @@ footer > hr{
 
     padding: 5px;
     text-align: center;
+}
+.licensepage-customscard h3{
+    font-weight: 500;
 }
 .licensepage-customscard img{
     width: 30%;

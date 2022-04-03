@@ -66,7 +66,6 @@ body{
 h1,h2,h3,p{
     color: var(--gray0);
     font-family: var(--font-head);
-    text-shadow: 1px black;
 }
 
 h1{
@@ -102,6 +101,7 @@ em{
 
 .button > p{
     font-weight: 900;
+    text-shadow: 1.5px 1.5px 0px var(--gray7);
 }
 
 .button:hover{
@@ -302,6 +302,10 @@ footer > hr{
 #titlepage video{
     height: 120%;
     z-index: 1;
+    background-image: url(../img/gaming.jpg);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
 }
 
 #graybox{
@@ -433,7 +437,7 @@ footer > hr{
     margin: 0px 75px;
 }
 
-.licensing-wrapper > article{
+.licensing-wrapper > div{
     grid-area: ar;
 }
 .licensing-wrapper > section{
@@ -451,7 +455,7 @@ footer > hr{
     font-weight: 300;
 }
 
-.licensing-wrapper > article > img{
+.licensing-wrapper > div > img{
     width: 80%;
     aspect-ratio: 1/1;
     border-radius: 100%;
@@ -763,7 +767,6 @@ input[type=button]{
     width: 90%;
     color: var(--gray0);
     font-family: var(--font-head);
-    text-shadow: 1px black;
     padding-top: 10px;
     padding-bottom: 10px;
     height: auto;
@@ -1003,7 +1006,7 @@ input[type=button]{
         height: auto;
         margin: 75px;
     
-        margin-top: 100px; /* ------------------------ TEMPORÄRT ------------------------ */
+        margin-top: 100px;
     }
     .topnav-logo h1 {
         font-size: 2.5em;

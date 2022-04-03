@@ -1,16 +1,9 @@
 <!--todo
 
-* Mobil layout -> öppen burgare -> desktop layout -> nav items försvinner
-* "what" section längst upp
-
 FEEDBACK FRÅN FÖRRA:
-mindre (filstorlek) bilder
 ta med fler test bilder
 skriva om validering
 skriv mycket om tillgänglighet (contrast checker)
-tänk mer på semantiska taggar. Passar något annan än div?
-kan inte finnas h2 utan h1!!
-skriva mer i början av min dokumentation - lägg mer tid på loggboken
 
 
 
@@ -24,7 +17,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>SominStudios</title>
-    <link rel="icon" href="img/icon.png" type="image/icon type">
+    <link rel="icon" href="img/icon.png" type="image/icon">
 </head>
 
 <body>
@@ -32,7 +25,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
         <div class="topnav-logo">
             <h1><a href="index.html"><img src="/img/logo.png" alt="SominStudios Logo"></a></h1>
         </div>
-        <section class="topnav-links flex-center">
+        <div class="topnav-links flex-center">
             <hr class="topnav-hr">
             <a href="/games.html" class="topnav-text">Games</a>
             <hr class="topnav-hr">
@@ -42,7 +35,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
             <hr class="topnav-hr">
             <a href="/about.html" class="topnav-text">About</a>
             <hr class="topnav-hr">
-        </section>
+        </div>
 
         <div class="burger">
             <div id="line1"></div>
@@ -58,7 +51,7 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
         </div>
         <div id="graybox"></div>
         <video autoplay muted loop id="myVideo">
-            <source src="img/trailer3.mp4" type="video/mp4">
+            <source src="img/trailer.mp4" type="video/mp4">
         </video>
     </section>
 
@@ -137,8 +130,8 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
 
     <hr class="spacer">
 
-    <section class="licensing-wrapper">
-        <article class="flex-center"><img src="img/Screenshot.jpg" alt="stylized screenshot"></article>
+    <div class="licensing-wrapper">
+        <div class="flex-center"><img src="img/Screenshot.jpg" alt="stylized screenshot"></div>
         <section>
             <h2>Licensing</h2>
             <p>Want a game for your website? We got you covered. Click below to see a complete list of all games that can be licensed</p>
@@ -146,17 +139,18 @@ skriva mer i början av min dokumentation - lägg mer tid på loggboken
                 <p>VIEW LICENSES</p>
             </div>
         </section>
-    </section>
+    </div>
 
     <hr class="spacer">
 
     <section class="partners-wrapper">
         <h2>Partners</h2>
+        <!-- Värt att tillägga här, ja, jag har fått rätigheter till att använda loggorna nedan. Vissa företag har speciella instruktioner om användning, andra fick jag maila och fråga om tillåtelse. -->
         <img src="img/external-logos/itch.png" alt="itch.io logo" class="partners-logo" id="partners-logo1">
         <img src="img/external-logos/CMG.svg" alt="Coolmathgames logo" class="partners-logo" id="partners-logo2">
         <img src="img/external-logos/NG.jpg" alt="Newgrounds logo" class="partners-logo" id="partners-logo3">
         <img src="img/external-logos/EG.png" alt="Engineering.com logo" class="partners-logo" id="partners-logo4">
-        <img src="img/external-logos/CG.avif" alt="Crazygames logo" class="partners-logo" id="partners-logo5">
+        <img src="img/external-logos/CG.png" alt="Crazygames logo" class="partners-logo" id="partners-logo5">
     </section>
 
 

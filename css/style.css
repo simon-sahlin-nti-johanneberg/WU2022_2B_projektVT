@@ -455,7 +455,7 @@ footer > hr{
     font-weight: 300;
 }
 
-.licensing-wrapper > div > img{
+.licensing-wrapper > article > img{
     width: 80%;
     aspect-ratio: 1/1;
     border-radius: 100%;
@@ -618,6 +618,16 @@ footer > hr{
     font-size: 1.1em;
     font-weight: 300;
 }
+#licensepage-title section{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 30px 0px;
+}
+#licensepage-title section img{
+    border-radius: 100%;
+    width: 25%;
+}
 
 #licensepage-customswrapper{
     display: flex;
@@ -646,6 +656,73 @@ footer > hr{
     width: 30%;
     margin: 20px;
 }
+
+#licensepage-pricingwrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    margin-bottom: 75px;
+    gap: 30px;
+}
+.licensepage-pricingcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    padding: 50px 60px 50px 60px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 300px;
+    max-width: 600px;
+    min-width: 100px;
+    height: auto;
+
+    text-align: center;
+
+    background-color: var(--gray5);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.itemHover{
+    transition: all 0.3s;
+}
+.itemHover:hover{
+    transform: translate(0px, -5px);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.licensepage-pricingcard h3{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.licensepage-pricingcard article{
+    background-color: var(--gray6);
+    display: flex;
+    justify-content: space-between;
+    width: 120%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.licensepage-pricingcard p{
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+.lText, .rText{
+    font-size: 10rem;
+}
+.lText{
+    text-align: left;
+}
+.rText{
+    text-align: right;
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                Contact page                                */
@@ -867,6 +944,13 @@ input[type=button]{
 #aboutpage-text4 p em, #aboutpage-text4 h3 em{
     color: var(--pink);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                            Individual Game Pages                           */
+/* -------------------------------------------------------------------------- */
+
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                      -                                     */
